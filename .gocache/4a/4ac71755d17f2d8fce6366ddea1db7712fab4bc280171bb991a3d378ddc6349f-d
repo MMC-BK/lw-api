@@ -1,5 +1,0 @@
-./application_profile_response.go
-./auth_get_application_profile_by_secret_key_request.go
-./authorize_by_application_request.go
-./base_session.go
-./status_details.go
