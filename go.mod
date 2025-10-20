@@ -1,4 +1,4 @@
-module github.com/bogudini/lw-api
+module github.com/MMC-BK/lw-api
 
 go 1.24.4
 
