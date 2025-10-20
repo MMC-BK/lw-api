@@ -3,8 +3,8 @@ package orders
 import (
 	"context"
 	"errors"
-	lw_api "github.com/bogudini/lw-api/client"
-	"github.com/bogudini/lw-api/orders/models"
+	lw_api "github.com/MMC-BK/lw-api/client"
+	"github.com/MMC-BK/lw-api/orders/models"
 	"net/http"
 	"net/url"
 	"strconv"

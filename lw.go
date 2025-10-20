@@ -2,10 +2,10 @@ package lw_api
 
 import (
 	"errors"
-	"github.com/bogudini/lw-api/auth"
-	client2 "github.com/bogudini/lw-api/client"
-	"github.com/bogudini/lw-api/orders"
-	"github.com/bogudini/lw-api/processedorders"
+	"github.com/MMC-BK/lw-api/auth"
+	client2 "github.com/MMC-BK/lw-api/client"
+	"github.com/MMC-BK/lw-api/orders"
+	"github.com/MMC-BK/lw-api/processedorders"
 	"net/url"
 	"time"
 )

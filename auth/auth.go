@@ -6,7 +6,7 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
-	"github.com/bogudini/lw-api/auth/models"
+	"github.com/MMC-BK/lw-api/auth/models"
 	"github.com/go-openapi/strfmt"
 	"io"
 	"net/http"

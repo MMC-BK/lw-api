@@ -8,8 +8,8 @@ import (
 
 	"github.com/go-openapi/strfmt"
 
-	lw_api "github.com/bogudini/lw-api/client"
-	processedmodels "github.com/bogudini/lw-api/processedorders/models"
+	lw_api "github.com/MMC-BK/lw-api/client"
+	processedmodels "github.com/MMC-BK/lw-api/processedorders/models"
 )
 
 type ProcessedOrders struct{ c lw_api.MakeRequest }

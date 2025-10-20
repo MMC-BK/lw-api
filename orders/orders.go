@@ -1,7 +1,7 @@
 package orders
 
 import (
-	lw_api "github.com/bogudini/lw-api/client"
+	lw_api "github.com/MMC-BK/lw-api/client"
 )
 
 type Orders struct{ c lw_api.MakeRequest }

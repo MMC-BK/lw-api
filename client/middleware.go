@@ -3,7 +3,7 @@ package client
 import (
 	"bytes"
 	"fmt"
-	"github.com/bogudini/lw-api/auth"
+	"github.com/MMC-BK/lw-api/auth"
 	"golang.org/x/time/rate"
 	"io"
 	"net/http"
