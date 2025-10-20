@@ -90,8 +90,21 @@ func (b *SearchProcessedOrdersRequestBuilder) AddSearchFilter(filter *processedm
 	b.request.SearchFilters = append(b.request.SearchFilters, filter)
 	return b
 }
+func (b *SearchProcessedOrdersRequestBuilder) SearchSortingASC(sortField string) *SearchProcessedOrdersRequestBuilder {
+	if b.request.SearchSorting != nil {
+		b.err = append(b.err, errors.New("search sorting might be used once"))
+	}
+	return b.searchSorting(processedmodels.SearchSortingSortDirectionASC, sortField)
+}
 
-func (b *SearchProcessedOrdersRequestBuilder) SearchSorting(sortDirection, sortField string) *SearchProcessedOrdersRequestBuilder {
+func (b *SearchProcessedOrdersRequestBuilder) SearchSortingDESC(sortField string) *SearchProcessedOrdersRequestBuilder {
+	if b.request.SearchSorting != nil {
+		b.err = append(b.err, errors.New("search sorting might be used once"))
+	}
+	return b.searchSorting(processedmodels.SearchSortingSortDirectionDESC, sortField)
+}
+
+func (b *SearchProcessedOrdersRequestBuilder) searchSorting(sortDirection, sortField string) *SearchProcessedOrdersRequestBuilder {
 	sorting := processedmodels.SearchSorting{
 		SortDirection: sortDirection,
 		SortField:     sortField,
