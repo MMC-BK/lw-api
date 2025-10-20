@@ -123,7 +123,7 @@ func (b *SearchProcessedOrdersRequestBuilder) build() (*processedmodels.Processe
 	return b.payload, nil
 }
 
-func (b *SearchProcessedOrdersRequestBuilder) Do() (*processedmodels.SearchProcessedOrdersResponse, error) {
+func (b *SearchProcessedOrdersRequestBuilder) Do() (*processedmodels.GenericPagedResultProcessedOrderWeb, error) {
 	if b == nil {
 		return nil, errors.New("builder is nil")
 	}
@@ -135,5 +135,5 @@ func (b *SearchProcessedOrdersRequestBuilder) Do() (*processedmodels.SearchProce
 	if err := b.client.DoJSON(b.ctx, http.MethodPost, "/api/ProcessedOrders/SearchProcessedOrders", nil, req, &out); err != nil {
 		return nil, err
 	}
-	return &out, nil
+	return out.ProcessedOrders, nil
 }

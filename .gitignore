@@ -29,4 +29,5 @@ AGENTS.md
 third_party/
 cmd/
 .gocache/
+.gitmodules
 

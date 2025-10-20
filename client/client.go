@@ -64,7 +64,7 @@ func (c *Client) DoJSON(ctx context.Context, method, path string, query url.Valu
 	if query != nil {
 		u.RawQuery = query.Encode()
 	}
-	fmt.Println(u.String())
+
 	var body io.Reader
 	if in != nil {
 		b, err := json.Marshal(in)
