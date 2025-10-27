@@ -4,6 +4,7 @@ import (
 	"errors"
 	"github.com/MMC-BK/lw-api/auth"
 	client2 "github.com/MMC-BK/lw-api/client"
+	"github.com/MMC-BK/lw-api/inventory"
 	"github.com/MMC-BK/lw-api/orders"
 	"github.com/MMC-BK/lw-api/processedorders"
 	"net/url"
@@ -14,6 +15,7 @@ type LinnworksAPI struct {
 	//Branches of API
 	*orders.Orders
 	*processedorders.ProcessedOrders
+	*inventory.Inventory
 }
 
 type LinnworksAPIBuilder struct {
@@ -126,10 +128,12 @@ func (b *LinnworksAPIBuilder) Build() (*LinnworksAPI, error) {
 
 	ordersAPI := orders.NewOrders(c)
 	processedOrdersAPI := processedorders.NewProcessedOrders(c)
+	inventoryAPI := inventory.NewInventory(c)
 
 	return &LinnworksAPI{
 		Orders:          ordersAPI,
 		ProcessedOrders: processedOrdersAPI,
+		Inventory:       inventoryAPI,
 	}, nil
 }
 
